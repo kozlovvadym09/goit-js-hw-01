@@ -1,23 +1,26 @@
 'use strict'
-let credits = (23580);
+let credits = 23580;
 
-const pricePerDroid = (3000);
+const pricePerDroid = 3000;
 
-let totalPrice = (21000);
+let totalPrice;
+
+let orderAmount = prompt('Укажите количество дроидов для покупки');
 
 
-let massage = prompt('Укажите количество дроидов для покупки');
-console.log(massage);
- 
+if (orderAmount === null) {
+   orderAmount = 'Отменено пользователем!';
+   console.log(orderAmount);
 
-if(massage === null) {
-   alert('Отменено пользователем!');
+} else if (orderAmount = Number(orderAmount)) {
+   totalPrice = pricePerDroid * orderAmount;
+}
 
-} else if (credits < totalPrice) {
+
+if (credits < totalPrice) {
    console.log('Недостаточно средств на счету!');
 
 } else if (credits > totalPrice) {
    credits -= totalPrice;
-   console.log(`'Вы купили ${massage} дроидов, на счету осталось ${credits} кредитов.'`);
+   alert(`'Вы купили ${orderAmount} дроидов, на счету осталось ${credits} кредитов.'`);
 }
- 

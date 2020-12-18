@@ -1,17 +1,18 @@
 'use strict'
 
-const ADMIN_PASSWORD = ('jqueryismyjam');
+const ADMIN_PASSWORD = 'jqueryismyjam';
 
 let massage = prompt('Введите пароль');
 
 console.log(massage);
 
 if(massage === null) {
-   alert('Отменено пользователем!'); 
+   massage = 'Отменено пользователем!'; 
 
 } else if (massage === ADMIN_PASSWORD) {
-   alert('Добро пожаловать!');
+   massage = 'Добро пожаловать!';
 
 } else {
-   alert('Доступ запрещен, неверный пароль!');
+   massage = 'Доступ запрещен, неверный пароль!';
 } 
+alert(massage);
