@@ -1,26 +1,29 @@
 'use strict'
+
+
 let credits = 23580;
 
 const pricePerDroid = 3000;
 
+let orderAmount = prompt('Укажите количество дроидов для покупки');
+
 let totalPrice;
 
-let orderAmount = prompt('Укажите количество дроидов для покупки');
+let message = 'Отменено пользователем!';
 
 
 if (orderAmount === null) {
-   orderAmount = 'Отменено пользователем!';
-   console.log(orderAmount);
-
-} else if (orderAmount = Number(orderAmount)) {
-   totalPrice = pricePerDroid * orderAmount;
-}
-
+   console.log(message);
+   
+} else totalPrice = pricePerDroid * orderAmount;
 
 if (credits < totalPrice) {
-   console.log('Недостаточно средств на счету!');
+   message = 'Недостаточно средств на счету!';
+   console.log(message);
 
 } else if (credits > totalPrice) {
+   
    credits -= totalPrice;
-   alert(`'Вы купили ${orderAmount} дроидов, на счету осталось ${credits} кредитов.'`);
+    
+   alert(`Вы купили ${orderAmount} дроидов, на счету осталось ${credits} кредитов.`);
 }
