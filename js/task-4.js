@@ -9,21 +9,19 @@ let orderAmount = prompt('Укажите количество дроидов д�
 
 let totalPrice;
 
-let message = 'Отменено пользователем!';
-
 
 if (orderAmount === null) {
-   console.log(message);
+   console.log('Отменено пользователем!');
    
-} else totalPrice = pricePerDroid * orderAmount;
+} else {
+   totalPrice = pricePerDroid * orderAmount;
 
-if (credits < totalPrice) {
-   message = 'Недостаточно средств на счету!';
-   console.log(message);
+   if (credits < totalPrice) {
+      console.log('Недостаточно средств на счету!');
 
-} else if (credits > totalPrice) {
-   
-   credits -= totalPrice;
+   } else {
+      credits -= totalPrice;
     
-   alert(`Вы купили ${orderAmount} дроидов, на счету осталось ${credits} кредитов.`);
+      alert(`Вы купили ${orderAmount} дроидов, на счету осталось ${credits} кредитов.`);
+   }
 }

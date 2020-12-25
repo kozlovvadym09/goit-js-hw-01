@@ -3,7 +3,11 @@
 let countryToDeliver = prompt('Введите страну для доставки');
 let price = 0;
 
-switch (countryToDeliver = countryToDeliver.toLowerCase()) {
+if (countryToDeliver !== null) {
+   countryToDeliver = countryToDeliver.toLowerCase();
+}
+
+switch (countryToDeliver) {
 
    case 'китай':
       price = 100;
@@ -23,16 +27,13 @@ switch (countryToDeliver = countryToDeliver.toLowerCase()) {
    
    case 'ямайка':
       price = 120;
-      break;
-   
-      default:
 
-      alert('В вашей стране доставка не доступна');
+      
 }
 
-if (price !== undefined) {
+if (price > 0) {
    alert(`Доставка в ${countryToDeliver} будет стоить ${price} кредитов`);
 
-} else (countryToDeliver = null); {
-   console.log(countryToDeliver);
+} else {
+   console.log('В вашей стране доставка не доступна');
 }

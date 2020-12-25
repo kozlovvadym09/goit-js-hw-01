@@ -15,7 +15,6 @@ const nextProcedure = `"Заказ оформлен, с вами свяжетс�
 if (total < ordered) {
    console.log(topUpProducts);
 
-} else if (total > ordered) {
-   
+} else  {
    console.log(nextProcedure);
 }

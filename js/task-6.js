@@ -11,7 +11,7 @@ while(input !== null) {
    }
    const incorrectInput = isNaN(input);
 
-   if(incorrectInput) {
+   if (incorrectInput) {
    alert('Было введено не число, попробуйте еще раз');
    continue;
    }
