@@ -16,4 +16,4 @@ while(input !== null) {
    continue;
    }
    total += Number(input);
-}
+};
